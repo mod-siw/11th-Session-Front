@@ -1,0 +1,224 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+button:focus {
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    gap: 10px;
+}
+
+.video video {
+    width: 100%;
+    height: 100%;
+}
+
+.hashtags {
+    display: flex;
+    font-size: 15px;
+    color: blue;
+    padding: 0px;
+}
+
+.info .views {
+    font-size: 12px;
+    color: gray;
+}
+
+.info .title {
+    font-size: 25px;
+}
+
+
+
+.actions {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    padding: 10px;
+}
+
+.actions img {
+    width: 50px;
+    height: 50px;
+}
+
+.actions button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    color: darkgray;
+}
+
+.channel {
+    display: flex;
+    justify-content:space-between;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+}
+
+.channel .metadata {
+    display: flex;
+    align-items: center;
+}
+
+.channel .metadata .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.channel .metadata img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.channel .metadata .info .name {
+    font-size: 14px ;
+}
+
+.channel .metadata .info .subscribers {
+    font-size: 12px ;
+    color: darkgray;
+}
+
+.channel .subscribe {
+    text-transform: uppercase;
+    color: red;
+    font-size: 14px;
+}
+
+/* Comments */
+
+.Comments  {
+    padding: 0 12px 12px;
+
+}
+
+.Comments .title {
+    font-size: 20px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.Comments .item {
+    display: flex;
+    padding: 6px;
+    width: 100%;
+}
+
+.Comments .item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.Comments .item .info {
+    display: flex;
+    flex: 1 1 95%;
+    justify-content: space-between;
+
+}
+
+.Comments .withoutbutton {
+    display: flex;
+    flex-direction: column;
+}
+
+.Comments .likesbutton {
+    display: flex;
+}
+
+.Comments .likesbutton button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    color: darkgray;
+}
+
+.Comments .likesbutton img {
+    width: 30px;
+    height: 30px;
+}
+
+.Comments .name {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.Comments .date {
+    font-size: 15px;
+    color: darkgray;
+}
+
+.Comments .content {
+    font-size: 18px;
+    padding: 6px;
+
+}
+
+.Comments .Followingcomments {
+    display: flex;
+    align-items: flex-start;
+    font-size: 15px;
+    color: blue;
+}
+
+/*Recommended*/
+
+.Recommended {
+    padding : 0 12px 12px ;
+}
+
+.Recommended .title {
+    font-size: 20px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.Recommended .item {
+    display: flex;
+} 
+
+.Recommended .item img {
+    flex: 1 1 40%;
+    width: 100px;
+    padding: 12px;
+} 
+
+
+.Recommended .item .info {
+    flex: 1 1 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 12px 12px;
+} 
+
+.Recommended .name {
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: darkgray;
+}
+
+.Recommended .views {
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: darkgray;
+}
+
