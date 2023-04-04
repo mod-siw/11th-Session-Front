@@ -72,27 +72,27 @@ button:focus {
     padding: 10px;
 }
 
-.channel .metadata {
+.channel .chan_data {
     display: flex;
     align-items: center;
 }
 
-.channel .metadata .info {
+.channel .chan_data .info {
     display: flex;
     flex-direction: column;
 }
 
-.channel .metadata img {
+.channel .chan_data img {
     width: 36px;
     height: 36px;
     border-radius: 50%;
 }
 
-.channel .metadata .info .name {
+.channel .chan_data .info .name {
     font-size: 14px ;
 }
 
-.channel .metadata .info .subscribers {
+.channel .chan_data .info .subscribers {
     font-size: 12px ;
     color: darkgray;
 }
