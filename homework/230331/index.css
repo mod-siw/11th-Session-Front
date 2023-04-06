@@ -15,22 +15,110 @@ button:focus {
     outline: none;
 }
 
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* nav 내부 요소 css */
+header{
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.logo{
+    width: 200px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 20px;
+    background-color: #F7F7F7;
+}
+.navRight{
+    display: flex;
+    margin-right: 20px;
+}
+.circleWrapper{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #9E9E9E;
+}
+.searchBar{
+    width: 400px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #F7F7F7;
+    border-radius: 20px;
+}
+.searchInput{
+    width: 80%;
+    height: 100%;
+    padding: 0 20px;
+
+    background-color: transparent;
+    border-style: none;
+    outline: none;
+    font-size: 18px;
+}
+.searchIcon{
+    height: 60%;
+    margin-right: 10px;
+}
+.profile{
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+
+    border: solid;
+    border-radius: 100%;
+    border-style: 2px;
+    border-color: #9E9E9E;
+}
+
+/*전체 grid 처리*/
 .container {
     display: grid;
     grid-template-columns: 7fr 3fr;
-    gap: 10px;
+    position: relative;
+    margin-top: 70px;
 }
+
 
 .video video {
     width: 100%;
     height: 100%;
 }
 
+/*동영상 및 채널 정보*/
 .hashtags {
     display: flex;
     font-size: 15px;
     color: blue;
     padding: 0px;
+}
+
+.info {
+    padding-top: 10%;
+    padding-left: 20px;
 }
 
 .info .views {
@@ -40,6 +128,7 @@ button:focus {
 
 .info .title {
     font-size: 25px;
+    font-weight: bold;
 }
 
 
@@ -62,6 +151,7 @@ button:focus {
     align-items: center;
     font-size: 12px;
     color: darkgray;
+    background-color: white;
 }
 
 .channel {
@@ -119,6 +209,7 @@ button:focus {
 .Comments .item {
     display: flex;
     padding: 6px;
+    padding-top: 12px;
     width: 100%;
 }
 
@@ -132,6 +223,7 @@ button:focus {
     display: flex;
     flex: 1 1 95%;
     justify-content: space-between;
+    padding: 0;
 
 }
 
@@ -150,6 +242,7 @@ button:focus {
     align-items: center;
     font-size: 12px;
     color: darkgray;
+    background-color: white;
 }
 
 .Comments .likesbutton img {
@@ -178,6 +271,7 @@ button:focus {
     align-items: flex-start;
     font-size: 15px;
     color: blue;
+    background-color:white;
 }
 
 /*Recommended*/
