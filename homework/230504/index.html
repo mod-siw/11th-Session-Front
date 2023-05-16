@@ -1,2 +1,60 @@
-<!-- 이 폴더 안에서 과제를 수행해주세요 -->
-<!-- 주석은 지우고 진행해주세요 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="todo.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css"
+            rel="stylesheet"
+        />
+        <title>TODOLIST</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="top-contents">
+                <h2 class="todo-title">TODOLIST</h2>
+                <div class="date">
+                    <button class="date-before-button"><</button>
+                    <span id="today-date"></span>
+                    <button class="date-next-button">></button>
+                </div>
+            </div>
+            <div class="todo-input-items">
+                <div id="popup-toggle"></div>
+                <button class="popup-button">INPUT TO DO</button>
+                <form class="todo-form">
+                    <input
+                        class="todo-input"
+                        placeholder="할 일을 입력해주세요."
+                    />
+                    <button class="todo-input-button" type="submit">
+                        ENTER!
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="todo-container">
+            <div class="todo-contents">
+                <h3 class="todolist-title">TO-DO</h3>
+                <div class="todo-background">
+                    <ul class="todo-list"></ul>
+                </div>
+            </div>
+            <div class="done-contents">
+                <h3 class="donelist-title">DONE</h3>
+                <div class="done-background">
+                    <ul class="done-list"></ul>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
