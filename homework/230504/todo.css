@@ -229,7 +229,7 @@ body {
 
     background-color: #ffffff;
     margin: 20px auto;
-    border: 5px solid #000000;
+    border: 7px solid #000000;
 }
 /* TO-DO ul 부분 */
 .todo-container .todo-contents .todo-list {
@@ -313,7 +313,7 @@ body {
 
     background-color: #ffffff;
     margin: 20px auto;
-    border: 5px solid #000000;
+    border: 7px solid #000000;
 }
 
 /*DONE ul 부분 */

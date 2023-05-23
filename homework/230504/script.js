@@ -1,4 +1,4 @@
-// date 내용
+// date 형식 맞게 만드는 함수
 const today = new Date();
 const leftPad = (value) => {
     if (value >= 10) {
@@ -7,13 +7,6 @@ const leftPad = (value) => {
         return "0" + value;
     }
 };
-
-// let t_year = today.getFullYear(); //년도
-// let t_month = leftPad(today.getMonth() + 1); //월
-// let t_date = leftPad(today.getDate()); //날짜
-
-// let dateString = t_year + "." + t_month + "." + t_date;
-// document.getElementById("today-date").innerHTML = dateString;
 
 // 날짜 업데이트 함수
 const updateDate = () => {
