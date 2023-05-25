@@ -145,14 +145,14 @@ const InputWrapper = styled.div`
     font-size: 22px;
     line-height: 30px;
 
-    */ .inputName {
+    .inputName {
         font-weight: 300;
         font-size: 16px;
     }
 `;
 
 const Input = styled.input`
-    width: 516px;
+    width: 506px;
     height: 51px;
     margin-bottom: 4%;
     padding-left: 10px;
@@ -167,10 +167,13 @@ const TrackOption = styled.div`
     box-sizing: border-box;
 
     width: 516px;
-    height: 97px;
+    /* height: 97px; */
     outline: none;
     margin-top: 30px;
     margin-bottom: 10px;
+
+    display: flex;
+    flex-direction: column;
 
     p {
         font-family: "Noto Sans";
@@ -181,14 +184,24 @@ const TrackOption = styled.div`
         line-height: 30px;
     }
 
-    .chooseTrack button {
+    .chooseTrack {
         background-color: transparent;
         border: none;
 
-        /* display: flex; */
-        /* flex-direction: column; */
-        justify-content: space-around;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
         align-items: center;
+    }
+
+    .chooseTrack button {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        background-color: transparent;
+        border: none;
     }
 `;
 
@@ -201,5 +214,5 @@ const OpenBtn = styled.button`
     border-radius: 24.5px;
     border: none;
     font-size: 20px;
-    margin-top: 80px;
+    margin-top: 30px;
 `;
