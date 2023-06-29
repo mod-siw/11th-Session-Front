@@ -1,3 +1,4 @@
+//loginpage
 import React, { useState } from "react";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
@@ -10,6 +11,7 @@ const LoginPage = () => {
     const [ID, setID] = useState();
     const [name, setName] = useState();
 
+<<<<<<< HEAD
     const dispatch = useDispatch();
     // 정보 저장 함수
     const submintAccounts = () => {
@@ -22,6 +24,19 @@ const LoginPage = () => {
         );
         navigate("/mypage");
     };
+=======
+  const dispatch = useDispatch();
+  // 정보 저장 함수
+  const submintAccounts = () => {
+    dispatch(
+      setUser({
+        userID: ID,
+        userName: name,
+      })
+    );
+    navigate("/mypage");
+  };
+>>>>>>> 5f203ca49e4bcc0ca53c9ce0ae58fd33448dac41
 
     return (
         <>
