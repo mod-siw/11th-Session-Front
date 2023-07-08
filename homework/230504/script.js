@@ -9,16 +9,14 @@ const leftPad = (value) => {
 };
 
 // 날짜 업데이트 함수
-const updateDate = () => {
-    let t_year = today.getFullYear(); // 년도
-    let t_month = leftPad(today.getMonth() + 1); // 월
-    let t_date = leftPad(today.getDate()); // 날짜
 
-    let dateString = t_year + "." + t_month + "." + t_date;
+const updateDate = () => {
+    let year = today.getFullYear(); // 년도
+    let month = leftPad(today.getMonth() + 1); // 월
+    let date = leftPad(today.getDate()); // 날짜
+    let dateString = year + "." + month + "." + date;
     document.getElementById("today-date").innerHTML = dateString;
 };
-
-updateDate();
 
 //날짜 변경
 const increaseBtn = document.querySelector(".date-next-button");
@@ -28,11 +26,16 @@ const decreaseBtn = document.querySelector(".date-before-button");
 const increaseDate = () => {
     const month = today.getMonth() + 1;
     const date = today.getDate();
+    const year = today.getFullYear();
 
-    if (month === 2) {
+    if (month === 12 && date === 31) {
+        today.setFullYear(year + 1);
+        today.setMonth(0);
+        today.setDate(1);
+    } else if (month === 2) {
         // 2월인 경우
         const isLeapYear =
-            (t_year % 4 === 0 && t_year % 100 !== 0) || t_year % 400 === 0;
+            (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
         const daysInMonth = isLeapYear ? 29 : 28;
 
         if (date < daysInMonth) {
@@ -46,7 +49,7 @@ const increaseDate = () => {
         if (date < 30) {
             today.setDate(date + 1);
         } else {
-            today.setMonth(month + 1);
+            today.setMonth(month, 1);
             today.setDate(1);
         }
     } else {
@@ -54,47 +57,55 @@ const increaseDate = () => {
         if (date < 31) {
             today.setDate(date + 1);
         } else {
-            today.setMonth(month + 1);
+            today.setMonth(month, 1);
             today.setDate(1);
         }
     }
+
+    updateDate(today);
 };
 
 // 날짜 감소 함수
 const decreaseDate = () => {
     const month = today.getMonth() + 1;
+    const prevMonth = today.getMonth();
     const date = today.getDate();
+    const year = today.getFullYear();
 
-    if (month === 3 && date === 1) {
+    if (month === 1 && date === 1) {
+        today.setFullYear(year - 1);
+        today.setMonth(11);
+        today.setDate(31);
+    } else if (month === 3 && date === 1) {
         // 3월 1일인 경우
         const isLeapYear =
-            (t_year % 4 === 0 && t_year % 100 !== 0) || t_year % 400 === 0;
+            (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
         const daysInPrevMonth = isLeapYear ? 29 : 28;
-        today.setMonth(month - 1);
+        today.setMonth(prevMonth - 1);
         today.setDate(daysInPrevMonth);
     } else if (date === 1) {
         // 해당 월의 1일인 경우
-        today.setMonth(month - 1);
-        const prevMonth = today.getMonth();
         const daysInPrevMonth = [1, 3, 5, 7, 8, 10, 12].includes(prevMonth)
             ? 31
             : 30;
+        today.setMonth(prevMonth - 1);
         today.setDate(daysInPrevMonth);
     } else {
         today.setDate(date - 1);
     }
+    updateDate(today);
 };
+
+updateDate();
 
 // increaseBtn을 클릭했을 때 날짜 증가
 increaseBtn.addEventListener("click", () => {
     increaseDate();
-    updateDate();
 });
 
 // decreaseBtn을 클릭했을 때 날짜 감소
 decreaseBtn.addEventListener("click", () => {
     decreaseDate();
-    updateDate();
 });
 
 // 초기화 함수
